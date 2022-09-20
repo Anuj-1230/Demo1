@@ -32,14 +32,14 @@ if(isset($_POST['Email']) && isset($_POST['Password'])) {
             $_SESSION['Username'] = $row['Username'];
             $_SESSION['Name'] = $row['Name'];
             $_SESSION['id'] = $row['id'];
-            header("Location home.php");
+            header("Location about.html");
             exit();
             }
             else{
                 header("Location: index.php?error=Incorrect email or password");
             }
         else{
-            header("Location: index.php");
+            header("Location: index.html");
             exit();
         }
         }

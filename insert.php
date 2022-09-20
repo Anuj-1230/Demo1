@@ -11,10 +11,9 @@ if($link === false){
 // Escape user inputs for security
 $Email = mysqli_real_escape_string($link, $_REQUEST['email']);
 $Password = mysqli_real_escape_string($link, $_REQUEST['password']);
-$cPassword = mysqli_real_escape_string($link, $_REQUEST['cpassword']);
  
 // attempt insert query execution
-$sql = "INSERT INTO persons (email, password, cPassword) VALUES ('$Email', '$Password', '$cPassword')";
+$sql = "INSERT INTO persons (email, password, cPassword) VALUES ('$Email', '$Password')";
 if(mysqli_query($link, $sql)){
     echo "Records added successfully.";
 } else{

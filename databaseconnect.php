@@ -10,7 +10,7 @@
  }
  
  //Create database
- $sql="CREATE DATABASE info( Email varchar, Password varchar, cPassword varchar)";//change name to change database
+ $sql="CREATE DATABASE info( Email varchar(20), Password varchar(20), cPassword varchar(20)";//change name to change database
  
  if( mysqli_query($conn,$sql) )
  {

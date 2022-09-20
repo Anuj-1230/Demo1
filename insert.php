@@ -9,12 +9,12 @@ if($link === false){
 }
  
 // Escape user inputs for security
-$first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
-$last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
-$email = mysqli_real_escape_string($link, $_REQUEST['email']);
+$Email = mysqli_real_escape_string($link, $_REQUEST['email']);
+$Password = mysqli_real_escape_string($link, $_REQUEST['password']);
+$cPassword = mysqli_real_escape_string($link, $_REQUEST['cpassword']);
  
 // attempt insert query execution
-$sql = "INSERT INTO persons (first_name, last_name, email) VALUES ('$first_name', '$last_name', '$email')";
+$sql = "INSERT INTO persons (email, password, cPassword) VALUES ('$Email', '$Password', '$cPassword')";
 if(mysqli_query($link, $sql)){
     echo "Records added successfully.";
 } else{
